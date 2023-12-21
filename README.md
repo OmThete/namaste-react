@@ -1,1 +1,20 @@
-React Projects
+# React Projects
+
+# parcel
+- Dev module
+- local module
+- HMR = Hot Module Replacement 
+- Uses File Watcher Algorithm - Written in C++
+- Caching - Faster build
+- Image Optimization
+- Minification
+- Bundling
+- Compress
+- Consistent Hashing
+- Code Splitting
+- Diffrential Bundling - support older browser
+- Diagnostic
+- Error Handling
+- HTTPs
+- Tree Shaking - remove unused code
+- Different Dev and Prod bundles
