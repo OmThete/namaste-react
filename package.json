@@ -3,6 +3,8 @@
   "version": "1.0.0",
   "description": "React by Om thete",
   "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html",
     "test": "jest"
   },
   "repository": {
@@ -23,8 +25,13 @@
   },
   "homepage": "https://github.com/OmThete/namaste-react#readme",
   "devDependencies": {
+    "browserify-zlib": "^0.2.0",
+    "buffer": "^6.0.3",
+    "https-browserify": "^1.0.0",
     "parcel": "^2.10.3",
-    "process": "^0.11.10"
+    "process": "^0.11.10",
+    "stream-browserify": "^3.0.0",
+    "stream-http": "^3.2.0"
   },
   "dependencies": {
     "react": "^18.2.0",
@@ -32,5 +39,5 @@
   },
   "browserslist": [
     "last 2 versions"
-]
+  ]
 }

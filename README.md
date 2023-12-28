@@ -18,3 +18,21 @@
 - HTTPs
 - Tree Shaking - remove unused code
 - Different Dev and Prod bundles
+
+# Namaste Food
+/*
+* Header
+* - Logo
+* - Nav Item
+* Body
+* - Search
+* - RestaurantContainer
+* - RestaurantCard
+*   - image
+*   - Name of Res , rating, cuisine, delivery time
+* Footer
+* - Copyright
+* - Links
+* - Address
+* - Contacts
+*/
