@@ -8,14 +8,14 @@ import Contact from "./components/Contact";
 import Error from "./components/Error";
 import RestaurantMenu from "./components/RestaurantMenu";
 
-const Grocery = lazy(()=>import("./components/Grocery"));
+const Grocery = lazy(() => import("./components/Grocery"));
 
-const AppLayout =()=> {
+const AppLayout = () => {
     return (
-    <div className="app">
-        <Header />
-        <Outlet />
-    </div>
+        <div className="app">
+            <Header />
+            <Outlet />
+        </div>
     )
 }
 
@@ -38,13 +38,13 @@ const appRouter = createBrowserRouter([
             },
             {
                 path: "/restaurants/:resId",
-                element:<RestaurantMenu />,
+                element: <RestaurantMenu />,
             },
             {
                 path: "/grocery",
                 element: (
                     <Suspense fallback={<h1>Loading...</h1>}>
-                        <Grocery />     
+                        <Grocery />
                     </Suspense>
                 ),
             }

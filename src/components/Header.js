@@ -4,9 +4,11 @@ import { Link } from "react-router-dom";
 import useOnlineStatus from "../utils/useOnlineStatus";
 const Header = () => {
     const [btnName,setBtnName] = useState("Login");
+
     const onlineStatus = useOnlineStatus();
+    
     return (
-        <div className="flex justify-between bg-pink-100 shadow-lg">
+        <div className="flex justify-between bg-pink-50 shadow-lg sm:bg-blue-50 md:bg-yellow-50">
             <div className="logo-container">
                 <img
                     className="w-56"
@@ -24,14 +26,14 @@ const Header = () => {
                     <li className="px-4"><Link to="/grocery">Grocery</Link></li>
                     <li className="px-4"><Link to="/grocery">Cart</Link></li>
                     <li className="px-4">
-                    <button 
-                        className="login" 
-                        onClick={()=>{
-                            btnName === "Login" ? setBtnName("Logout") : setBtnName("Login")
-                        }}
-                    >
-                        {btnName}
-                    </button>
+                        <button 
+                            className="login" 
+                            onClick={()=>{
+                                btnName === "Login" ? setBtnName("Logout") : setBtnName("Login")
+                            }}
+                        >
+                            {btnName}
+                        </button>
                     </li>
                 </ul>
             </div>
