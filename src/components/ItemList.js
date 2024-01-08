@@ -1,8 +1,14 @@
+import { useDispatch } from "react-redux";
 import { CDN_URL } from "../utils/constants";
+import { addItems } from "../utils/cartSlice";
 
 //list of item in the accrodion
 const ItemList = ({ items }) => {
-    // console.log(items)
+    //Dispatch an action
+    const dispatch = useDispatch();
+    const handleAddItem = (item) => {
+        dispatch(addItems(item))
+    }
     return (
         <div>
             {items.map((item) => (
@@ -24,7 +30,10 @@ const ItemList = ({ items }) => {
                     </div>
                     <div  className="w-3/12 p-4">
                         <div className="absolute">
-                            <button className="p-2 my-14 mx-10 hover:shadow-xl rounded bg-black text-white shadow-sm">Add+</button>
+                            <button className="p-2 my-14 mx-10 hover:shadow-xl rounded bg-black text-white shadow-sm" 
+                              onClick={()=>handleAddItem(item)}>
+                                Add+
+                            </button>
                         </div>
                         <img src={CDN_URL + item.card.info.imageId} />
                         
